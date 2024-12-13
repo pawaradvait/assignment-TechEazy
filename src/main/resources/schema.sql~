@@ -1,0 +1,14 @@
+
+create table person (
+    id integer not null,
+    name varchar(255),
+    address varchar(255),
+    primary key (id)
+);
+
+create table subject (
+    id integer not null,
+    name varchar(255),
+    person_id integer,
+    primary key (id)
+);
