@@ -1,0 +1,28 @@
+package com.TechEazy.controller;
+
+import com.TechEazy.model.Response;
+import com.TechEazy.model.Student;
+import com.TechEazy.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+public class StudentController {
+
+    @Autowired
+    private StudentService studentService;
+
+    @PostMapping(value = "/api/student", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Response> addStudent(@RequestBody Student student ){
+    Student student1 =studentService.addStudent(student);
+   return ResponseEntity.status(200)
+           .body(new Response("200","successfully created student"));
+    }
+
+}
