@@ -41,19 +41,20 @@ Once the application is running, you can access the H2 console at:
 ```
 http://localhost:8080/h2-console/
 ```
+Use the following credentials to log in:
+- **JDBC URL**: `jdbc:h2:mem:testdb`
+- **User Name**: `sa`
+- **Password**: (leave blank)
 
 ### add Admin User by Wrting sql script in h2-console
- PASSWORD IS :- 1234 
- USERNAME IS :- pawaradvait2003@gmail.com
+ `PASSWORD` IS :- 1234  
+ `USERNAME` IS :- pawaradvait2003@gmail.com
 ```sql
 INSERT INTO `STUDENT` (`NAME`, `PASSWORD`, `ROLE`, `ADDRESS`, `EMAIL`) 
 VALUES ('advait', '{bcrypt}$2a$10$MvlGoh6NJqFKNu8TQOa2veua36QrCXJ8zO7uAr4.tg36mQAJpnGoC', 'ROLE_ADMIN', 'mumbai', 'pawaradvait2003@gmail.com');
 ```
 
-Use the following credentials to log in:
-- **JDBC URL**: `jdbc:h2:mem:testdb`
-- **User Name**: `sa`
-- **Password**: (leave blank)
+
 
 ### API Endpoints
 The following API endpoints are available:

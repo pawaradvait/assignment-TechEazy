@@ -1,7 +1,7 @@
 # TechEazy-Assignment
 
 ## Overview
-This project is a Spring Boot application that serves as a microservice for managing students and subjects. It utilizes H2 in-memory database for data storage and implements JWT-based authentication.
+This project is a Spring Boot application that provides APIs  for managing students and subjects. It utilizes H2 in-memory database for data storage and implements JWT-based authentication.
 
 ## Prerequisites
 - Java 17 or higher
