@@ -28,7 +28,7 @@ public class SubjectController {
             if (subject1 != null) {
                 return ResponseEntity.status(200).body(new Response("200", "successfully created subject"));
             }else{
-                return ResponseEntity.status(401).body(new Response("404" , "NOT FOUND"));
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Response("404" , "NOT FOUND"));
             }
 
         }

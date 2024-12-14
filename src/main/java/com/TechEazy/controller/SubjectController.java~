@@ -37,8 +37,11 @@ public class SubjectController {
 
     @PostMapping("/api/subject")
     public ResponseEntity<Response> addSubject(@RequestBody Subject subject){
-        subjectService.addSubject(subject);
-        return ResponseEntity.status(200).body(new Response("200","successfully created subject"));
+   Subject subject1 =     subjectService.addSubject(subject);
+    if(subject1 == null) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Response("400", "subject already exist"));
+    }
+   return ResponseEntity.status(200).body(new Response("200","successfully created subject"));
     }
 
 }
