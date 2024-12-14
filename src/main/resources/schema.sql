@@ -14,9 +14,11 @@ CREATE TABLE IF NOT EXISTS `subject` (
 );
 
 CREATE TABLE IF NOT EXISTS `person_subject` (
-                                                `id` int AUTO_INCREMENT PRIMARY KEY,
+
+
                                                 `person_id` int NOT NULL,
-                                                `subject_id` int NOT NULL,
+                                                  `subject_id` int NOT NULL,
+                                                   PRIMARY KEY (`person_id`, `subject_id`),
                                                 FOREIGN KEY (`person_id`) REFERENCES `student` (`id`),
                                                 FOREIGN KEY (`subject_id`) REFERENCES `subject` (`id`)
 );

@@ -20,7 +20,7 @@ public class Subject {
     private String name;
 
     @ManyToMany(mappedBy = "subjects" , fetch = FetchType.LAZY ,cascade = CascadeType.PERSIST)
-    @JsonIgnore
+
     private Set<Student> students = new HashSet<>();
 
  }

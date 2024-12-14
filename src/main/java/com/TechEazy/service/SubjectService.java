@@ -4,7 +4,9 @@ import com.TechEazy.model.Subject;
 
 public interface SubjectService {
 
-    Subject addSubject(String subject);
+    Subject addSubjecttoStudent(String subject);
+
+    Subject addSubject(Subject name);
 
 
 }

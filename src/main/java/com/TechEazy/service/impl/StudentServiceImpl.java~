@@ -41,7 +41,6 @@ public class StudentServiceImpl implements StudentService {
     public Student getstudent() {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        studentRepo.findByEmail(authentication.getName());
-        return studentRepo.findByEmail(authentication.getName());
+        
     }
 }

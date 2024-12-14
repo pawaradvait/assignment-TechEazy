@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface SubjectRepo extends JpaRepository<Subject, Integer> {
 
 
+    Subject findByName(String name);
 }

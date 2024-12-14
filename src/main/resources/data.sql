@@ -1,2 +1,2 @@
-INSERT INTO `subject` (`name`)
+INSERT INTO `SUBJECT` (`NAME`)
 VALUES ('java');
