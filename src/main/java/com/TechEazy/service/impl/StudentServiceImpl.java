@@ -25,7 +25,7 @@ public class StudentServiceImpl implements StudentService {
     public Student addStudent(Student student) {
 
        student.setPassword(passwordEncoder.encode(student.getPassword()));
-       student.setRole("ROLE_ADMIN");
+       student.setRole("ROLE_STUDENT");
          studentRepo.save(student);
 
         return student;
